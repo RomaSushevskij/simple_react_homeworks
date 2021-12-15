@@ -1,3 +1,96 @@
-.someClass {
+.affairBlock {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    margin-top: 10px;
 
 }
+
+.affairBlock .affairName {
+    width: 150px;
+    margin: 10px
+}
+.affairBlock .affairPriority {
+    width: 70px;
+    margin: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+}
+
+.affairBlock button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #fa3900;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(250, 57, 0, .5);
+    cursor: pointer;
+    margin:10px;
+}
+.affairBlock button svg {
+    fill: white;
+}
+.affairBlock button:hover {
+    background-color: #ff8b69;
+    box-shadow: 0 0 3px rgba(255, 109, 105, .5);
+}
+
+.affairBlock .affairPriority {
+    margin-right: 50px;
+    padding: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.affairBlock .affairName {
+    word-break: break-word;
+}
+.low {
+    border:2px solid #95D301;
+    color: #95D301;
+}
+.high {
+    border:2px solid #d60000;
+    color:#d60000
+}
+.middle {
+    border:2px solid #F1C303;
+    color: #F1C303;
+}
+.FilterTypeButton {
+    background-color: darkgrey;
+}
+.FilterTypeButton:hover {
+    background-color: lightgray;
+}
+.FilterTypeButton,
+.FilterTypeButtonAll,
+.FilterTypeButtonLow,
+.FilterTypeButtonMiddle,
+.FilterTypeButtonHigh{
+    border: none;
+    padding: 5px;
+    font-size: 1em;
+    margin:10px 30px;
+    cursor: pointer;
+}
+
+.FilterTypeButtonAll.active {
+    background-color: lightblue;
+    box-shadow: 0 0 10px rgba(173,216,230, 1);
+}
+.FilterTypeButtonLow.active {
+    background-color: #95D301;
+    box-shadow: 0 0 10px rgba(149,211,1, 1);
+}
+.FilterTypeButtonMiddle.active {
+    background-color: #F1C303;
+    box-shadow: 0 0 10px rgba(241,195,3, 1);
+}
+.FilterTypeButtonHigh.active {
+    background-color: #d60000;
+    box-shadow: 0 0 8px rgba(214,0,0, .8);
+}
+

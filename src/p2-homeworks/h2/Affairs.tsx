@@ -1,11 +1,13 @@
 import React from 'react'
 import Affair from './Affair'
-import {AffairType} from './HW2'
+import {AffairType, FilterType} from './HW2'
+import style from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
-    data: any
-    setFilter: any
-    deleteAffairCallback: any
+    data: Array<AffairType>
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
+    filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -15,22 +17,36 @@ function Affairs(props: AffairsPropsType) {
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
         />
-    ))
+    ));
 
-    const setAll = () => {} // need to fix
-    const setHigh = () => {}
-    const setMiddle = () => {}
-    const setLow = () => {}
+    const setActiveClass = (filter: FilterType) => {
+        if (props.filter === filter && filter === 'all') {
+            return `${style.FilterTypeButtonAll} ${style.active}`
+        } else if (props.filter === filter && filter === 'low') {
+            return `${style.FilterTypeButtonLow} ${style.active}`
+        } else if (props.filter === filter && filter === 'middle') {
+            return `${style.FilterTypeButtonMiddle} ${style.active}`
+        } else if (props.filter === filter && filter === 'high') {
+            return `${style.FilterTypeButtonHigh} ${style.active}`
+        } else {
+            return style.FilterTypeButton
+        }
+    }
+
+    const setAll = () => props.setFilter('all');// need to fix
+    const setHigh = () => props.setFilter('high');
+    const setMiddle = () => props.setFilter('middle');
+    const setLow = () => props.setFilter('low');
 
     return (
         <div>
 
             {mappedAffairs}
 
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <button className={setActiveClass('all')} onClick={setAll}>All</button>
+            <button className={setActiveClass('high')} onClick={setHigh}>High</button>
+            <button className={setActiveClass('middle')} onClick={setMiddle}>Middle</button>
+            <button className={setActiveClass('low')} onClick={setLow}>Low</button>
         </div>
     )
 }
