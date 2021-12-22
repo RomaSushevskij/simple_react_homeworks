@@ -43,10 +43,12 @@ function Affairs(props: AffairsPropsType) {
 
             {mappedAffairs}
 
-            <button className={setActiveClass('all')} onClick={setAll}>All</button>
-            <button className={setActiveClass('high')} onClick={setHigh}>High</button>
-            <button className={setActiveClass('middle')} onClick={setMiddle}>Middle</button>
-            <button className={setActiveClass('low')} onClick={setLow}>Low</button>
+            <div className={style.buttonBlock}>
+                <button className={setActiveClass('all')} onClick={setAll}>All</button>
+                <button className={setActiveClass('high')} onClick={setHigh}>High</button>
+                <button className={setActiveClass('middle')} onClick={setMiddle}>Middle</button>
+                <button className={setActiveClass('low')} onClick={setLow}>Low</button>
+            </div>
         </div>
     )
 }

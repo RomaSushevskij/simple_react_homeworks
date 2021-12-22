@@ -55,7 +55,6 @@ function HW2() {
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
             <hr/>
-            <p>Lorem ipsum dolor sit amet, consectetur.</p>
         </div>
     )
 }
