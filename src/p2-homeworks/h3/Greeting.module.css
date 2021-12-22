@@ -65,6 +65,10 @@
     background-color: #81c884;
     box-shadow: 0 0 3px rgba(170, 218, 172, .5);
 }
+.inputWrapper .addUserButton:disabled {
+    background-color: #bbbbbb;
+    box-shadow: 0 0 3px rgba(170, 218, 172, .5);
+}
 
 .inputWrapper .addUserButton svg {
     fill: #ffffff;
