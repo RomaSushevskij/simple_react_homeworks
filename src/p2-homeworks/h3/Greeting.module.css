@@ -12,6 +12,9 @@
     outline: none;
     border: 1px solid #4CAF50;
 }
+.inputWrapper .inputAndButton .usersInput:focus.error {
+    border: 1px solid #C83535;
+}
 
 .inputWrapper .usersInput.error {
     border: 1px solid #C83535;
@@ -44,7 +47,7 @@
     top: -5px;
     transform-origin: 50% 50%;
     transform: rotate(45deg);
-
+    box-shadow: 0 0 5px rgba(200, 53, 53, .5);
 }
 
 .inputWrapper .addUserButton {
@@ -65,6 +68,7 @@
     background-color: #81c884;
     box-shadow: 0 0 3px rgba(170, 218, 172, .5);
 }
+
 .inputWrapper .addUserButton:disabled {
     background-color: #bbbbbb;
     box-shadow: 0 0 3px rgba(170, 218, 172, .5);
