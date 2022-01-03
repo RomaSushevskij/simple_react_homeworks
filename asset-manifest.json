@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/simple_react_homeworks/static/css/main.6624fde8.chunk.css",
+    "main.css": "/simple_react_homeworks/static/css/main.060d4d7e.chunk.css",
     "main.js": "/simple_react_homeworks/static/js/main.355977ba.chunk.js",
     "main.js.map": "/simple_react_homeworks/static/js/main.355977ba.chunk.js.map",
     "runtime-main.js": "/simple_react_homeworks/static/js/runtime-main.6e95146f.js",
@@ -8,13 +8,13 @@
     "static/js/2.e5a5252f.chunk.js": "/simple_react_homeworks/static/js/2.e5a5252f.chunk.js",
     "static/js/2.e5a5252f.chunk.js.map": "/simple_react_homeworks/static/js/2.e5a5252f.chunk.js.map",
     "index.html": "/simple_react_homeworks/index.html",
-    "static/css/main.6624fde8.chunk.css.map": "/simple_react_homeworks/static/css/main.6624fde8.chunk.css.map",
+    "static/css/main.060d4d7e.chunk.css.map": "/simple_react_homeworks/static/css/main.060d4d7e.chunk.css.map",
     "static/js/2.e5a5252f.chunk.js.LICENSE.txt": "/simple_react_homeworks/static/js/2.e5a5252f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6e95146f.js",
     "static/js/2.e5a5252f.chunk.js",
-    "static/css/main.6624fde8.chunk.css",
+    "static/css/main.060d4d7e.chunk.css",
     "static/js/main.355977ba.chunk.js"
   ]
 }
