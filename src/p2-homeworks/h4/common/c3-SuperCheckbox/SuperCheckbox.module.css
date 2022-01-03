@@ -24,6 +24,10 @@
     border-radius: 3px;
 }
 
+.label:hover .fakeFlag {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
 .fakeFlag:before {
     content: '';
     background-image: url('../../../../checkMark.png');
@@ -43,6 +47,10 @@
 .checkbox:checked + .fakeFlag:before {
     opacity: 1;
     transition: .4s;
+}
+
+.label:hover .checkbox:checked + .fakeFlag {
+    box-shadow: 0 0 8px rgba(0, 127, 255, 1);
 }
 
 .checkbox:checked + .fakeFlag {
