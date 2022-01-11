@@ -1,0 +1,49 @@
+.homeWork_1, .homeWork_2, .homeWork_3, .homeWork_4 {
+    background: linear-gradient(90deg, #f598a8, #f6edb2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.homeWork_2 {
+    background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+}
+
+.homeWork_3 {
+    background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+}
+
+.homeWork_4 {
+    background: linear-gradient(90deg, #f6edb2, #f598a8);
+}
+
+.stand {
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 2em;
+    font-weight: bold;
+    color: #5c5c5c;
+    margin-right: 40px;
+}
+
+.title.header {
+    margin-left: 40px;
+}
+
+.header {
+    padding-top: 10px;
+    background-color: #ebebeb;
+}

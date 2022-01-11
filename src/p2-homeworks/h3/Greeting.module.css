@@ -12,6 +12,7 @@
     outline: none;
     border: 1px solid #4CAF50;
 }
+
 .inputWrapper .inputAndButton .usersInput:focus.error {
     border: 1px solid #C83535;
 }
@@ -22,7 +23,7 @@
 
 .inputWrapper {
     position: relative;
-    margin: 20px 0px 50px 50px;
+
 }
 
 .errorBlockMessage {

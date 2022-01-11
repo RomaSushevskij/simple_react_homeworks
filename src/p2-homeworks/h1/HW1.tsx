@@ -1,5 +1,7 @@
 import React from 'react'
 import Message from "./Message";
+import style from './HW.module.css' ;
+
 
 const messageData = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
@@ -11,23 +13,19 @@ const messageData = {
 function HW1() {
 
     return (
-        <div>
-            <hr/>
-            homeworks 1
+        <div className={style.homeWork_1}>
+            <div className={style.title}>homeworks 1</div>
+
 
             {/*should work (должно работать)*/}
-
-            <Message
-                avatar={messageData.avatar}
-                name={messageData.name}
-                message={messageData.message}
-                time={messageData.time}
-            />
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeMessage/>*/}
-            <hr/>
+            <div className={style.stand}>
+                <Message
+                    avatar={messageData.avatar}
+                    name={messageData.name}
+                    message={messageData.message}
+                    time={messageData.time}
+                />
+            </div>
         </div>
     );
 }
