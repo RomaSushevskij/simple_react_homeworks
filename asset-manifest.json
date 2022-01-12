@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/simple_react_homeworks/static/css/main.e0d66e60.chunk.css",
+    "main.css": "/simple_react_homeworks/static/css/main.bd917b50.chunk.css",
     "main.js": "/simple_react_homeworks/static/js/main.67b84e78.chunk.js",
     "main.js.map": "/simple_react_homeworks/static/js/main.67b84e78.chunk.js.map",
     "runtime-main.js": "/simple_react_homeworks/static/js/runtime-main.6e95146f.js",
@@ -8,14 +8,14 @@
     "static/js/2.5622cace.chunk.js": "/simple_react_homeworks/static/js/2.5622cace.chunk.js",
     "static/js/2.5622cace.chunk.js.map": "/simple_react_homeworks/static/js/2.5622cace.chunk.js.map",
     "index.html": "/simple_react_homeworks/index.html",
-    "static/css/main.e0d66e60.chunk.css.map": "/simple_react_homeworks/static/css/main.e0d66e60.chunk.css.map",
+    "static/css/main.bd917b50.chunk.css.map": "/simple_react_homeworks/static/css/main.bd917b50.chunk.css.map",
     "static/js/2.5622cace.chunk.js.LICENSE.txt": "/simple_react_homeworks/static/js/2.5622cace.chunk.js.LICENSE.txt",
     "static/media/logo.9594cba7.webp": "/simple_react_homeworks/static/media/logo.9594cba7.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.6e95146f.js",
     "static/js/2.5622cace.chunk.js",
-    "static/css/main.e0d66e60.chunk.css",
+    "static/css/main.bd917b50.chunk.css",
     "static/js/main.67b84e78.chunk.js"
   ]
 }
