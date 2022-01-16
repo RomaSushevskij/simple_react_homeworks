@@ -10,17 +10,14 @@
     justify-content: space-around;
     flex-direction: column;
     align-items: stretch;
-    width: 125px;
+    width: 150px;
     background: #C6DDF4;
     left: 0;
+    top:60px;
     list-style: none;
-    opacity: 0;
-    z-index: -1;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
     padding: 0;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -40,10 +37,24 @@
 
 }
 
-.level button:focus + ul {
-    opacity: 1;
-    z-index: 1;
-    pointer-events: all;
-    transform: translateY(0px);
 
+.enter {
+    opacity: 0;
+    transform: translateY(-25px);
+}
+
+.enterActive {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms, transform 500ms;
+}
+
+.exit {
+    opacity: 1;
+}
+
+.exitActive {
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: opacity 500ms, transform 500ms;
 }
