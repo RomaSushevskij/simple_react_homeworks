@@ -6,25 +6,20 @@ type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 
 type SuperButtonPropsType = DefaultButtonPropsType & {
     red?: boolean
-    callback?:()=>void
 }
 
 const SuperButton: React.FC<SuperButtonPropsType> = (
     {
         red,
         className,
-        callback,
         ...restProps// все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
     const finalClassName = `${red ? s.red : s.default} ${className}`;
-    const onClidkHandler = () => {
-        callback && callback()
-    }
+
 
     return (
         <button
-            onClick={onClidkHandler}
             className={finalClassName}
             {...restProps} // отдаём кнопке остальные пропсы если они есть (children там внутри)
         />

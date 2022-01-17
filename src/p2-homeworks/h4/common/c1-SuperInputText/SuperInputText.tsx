@@ -11,6 +11,7 @@ type SuperInputTextPropsType = DefaultInputPropsType & { // и + ещё проп
     onEnter?: () => void
     error?: string
     spanClassName?: string
+    customStyle?:string
 }
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
@@ -20,6 +21,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         onKeyPress, onEnter,
         error,
         className, spanClassName, name, title,
+        customStyle,
 
         ...restProps// все остальные пропсы попадут в объект restProps
     }
@@ -42,7 +44,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     const finalInputClassName = `${error ? `${s.errorInput} ${s.superInput}` : s.superInput} ${className}`;// need to fix with (?:) and s.superInput
 
     return (
-        <div className={s.inputWrapper}>
+        <div className={customStyle ? `${customStyle} ${s.inputWrapper}` : s.inputWrapper}>
             <input name={name}
                    type={'text'}
                    onChange={onChangeCallback}

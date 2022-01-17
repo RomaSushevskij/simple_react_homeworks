@@ -9,8 +9,8 @@ function Header() {
     const [selectMode, setSelectMode] = useState(false);
 
     return (
-        <div className={style.level}>
-            <SuperButton callback={() => setSelectMode(!selectMode)}>Select level</SuperButton>
+        <div tabIndex={0} onBlur={()=>setSelectMode(false)} className={style.level}>
+            <SuperButton onClick={() => setSelectMode(!selectMode)}>Select level</SuperButton>
             <CSSTransition in={selectMode}
                            classNames={style}
                            timeout={600}

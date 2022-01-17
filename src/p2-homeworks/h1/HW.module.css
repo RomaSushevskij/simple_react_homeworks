@@ -1,4 +1,4 @@
-.homeWork_1, .homeWork_2, .homeWork_3, .homeWork_4 {
+.homeWork_1, .homeWork_2, .homeWork_3, .homeWork_4, .homeWork_6 {
     background: linear-gradient(90deg, #f598a8, #f6edb2);
     display: flex;
     justify-content: center;
@@ -17,6 +17,9 @@
 .homeWork_4 {
     background: linear-gradient(90deg, #f6edb2, #f598a8);
 }
+.homeWork_6 {
+    background: linear-gradient(90deg, #f5abd7,#59c4cd);
+}
 
 .stand {
     padding: 40px;
@@ -26,6 +29,8 @@
     align-items: center;
     background-color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+
 }
 
 .title {

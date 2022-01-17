@@ -5,7 +5,8 @@
 }
 
 .superInput, .errorInput {
-    width: 200px;
+    box-sizing: border-box;
+    width:100%;
     padding: 11px;
     outline: none;
     font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
@@ -18,7 +19,7 @@
 }
 
 .superInput:focus {
-    border: 1px solid #007FFF;
+    border-color: #007FFF;
     box-shadow: 0 0 12px rgba(0, 127, 255, .4);
 }
 
@@ -30,7 +31,7 @@
     max-width: 200px;
     min-width: 100px;
     background-color: #BE4B49;
-    border: 1px solid #9C3735;
+    border-color: #9C3735;
     display: inline-block;
     vertical-align: top;
     top: 3px;

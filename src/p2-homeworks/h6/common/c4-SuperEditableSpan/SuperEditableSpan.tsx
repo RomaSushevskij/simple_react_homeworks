@@ -1,5 +1,9 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from 'react'
 import SuperInputText from '../../../h4/common/c1-SuperInputText/SuperInputText'
+import style from './SuperEditableSpan.module.css'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCoffee, faPencilAlt} from "@fortawesome/free-solid-svg-icons";
+import {CSSTransition} from "react-transition-group";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -27,39 +31,52 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
-    const [editMode, setEditMode] = useState<boolean>(false)
-    const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {}
+    const [editMode, setEditMode] = useState<boolean>(false);
+    const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {};
 
     const onEnterCallback = () => {
-        // setEditMode() // выключить editMode при нажатии Enter
+        setEditMode(false);
 
         onEnter && onEnter()
-    }
+    };
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
-        // setEditMode() // выключить editMode при нажатии за пределами инпута
+        setEditMode(false);
 
         onBlur && onBlur(e)
-    }
+    };
     const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-        // setEditMode() // включить editMode при двойном клике
-
+        setEditMode(true)
         onDoubleClick && onDoubleClick(e)
-    }
+    };
 
-    const spanClassName = `${'сделать красивый стиль для спана'} ${className}`
+    const spanClassName = `${style.editSpan} ${className}`;
 
     return (
-        <>
-            {editMode
-                ? (
+        <div className={style.editableSpanWrapper}>
+            <CSSTransition in={editMode}
+                           timeout={400}
+                           classNames={style}
+                           unmountOnExit
+                           mountOnEnter>
+                <div className={style.inputWrapper}>
                     <SuperInputText
                         autoFocus // пропсу с булевым значением не обязательно указывать true
                         onBlur={onBlurCallback}
                         onEnter={onEnterCallback}
+                        onDoubleClick={onDoubleClickCallBack}
+                        error={restProps.error}
+                        customStyle={style.inputStyle}
 
                         {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                     />
-                ) : (
+                </div>
+            </CSSTransition>
+            <CSSTransition in={!editMode}
+                           timeout={500}
+                           classNames={style}
+                           unmountOnExit
+                           mountOnEnter>
+                <div className={style.spanWrapper}>
                     <span
                         onDoubleClick={onDoubleClickCallBack}
                         className={spanClassName}
@@ -68,10 +85,11 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
                         {children || restProps.value}
+                        <FontAwesomeIcon className={style.editPen} icon={faPencilAlt}/>
                     </span>
-                )
-            }
-        </>
+                </div>
+            </CSSTransition>
+        </div>
     )
 }
 
