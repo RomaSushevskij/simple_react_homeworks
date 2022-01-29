@@ -3,7 +3,6 @@ import {homeWorkReducer} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import style from "../h1/HW.module.css";
 import styles from "./HW8.module.css";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 export type UserType = {
     _id: number

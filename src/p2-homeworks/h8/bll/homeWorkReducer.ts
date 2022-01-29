@@ -3,9 +3,20 @@ import {UserType} from "../HW8";
 export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => { // need to fix any
     switch (action.type) {
         case 'sort':
-            return [...state.sort((p1, p2) => action.payload === "up" ?
-                p1.age - p2.age : action.payload === "down" ? p2.age - p1.age : 0)]
-        case "check":
+            const newState = [...state].sort((p1, p2) => {
+                    if (p1.name > p2.name) {
+                        return 1
+                    } else if (p1.name < p2.name) {
+                        return -1
+                    } else {
+                        return 0
+                    }
+                }
+            )
+            return action.payload === 'up' ? newState : newState.reverse()
+        case
+        "check"
+        :
             return state.filter(p => p.age >= action.payload)
         default:
             return state
@@ -13,6 +24,5 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
 }
 
 export type ActionType =
-    { type: 'sort', payload: 'up' } |
-    { type: 'sort', payload: 'down' } |
-    { type: 'check', payload: 18 }
+    { type: 'sort', payload: 'up' | 'down' } |
+    { type: 'check', payload: number }
