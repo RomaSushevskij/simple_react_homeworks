@@ -1,3 +1,7 @@
+.affairsBlock {
+    min-height: 400px;
+}
+
 .affairBlock {
     max-width: 400px;
     display: flex;

@@ -11,7 +11,7 @@ function HW7() {
     return (
 
         <div className={style.homeWork_7}>
-            <div className={style.title}>homeworks 7</div>
+            <div className={style.title}>homework 7</div>
             <div className={style.stand}>
                 <div>
                     <SuperSelect

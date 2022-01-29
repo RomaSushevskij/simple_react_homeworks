@@ -21,7 +21,7 @@ function HW3() {
         <div className={style.homeWork_3}>
 
             <div className={style.title}>
-                homeworks 3
+                homework 3
             </div>
 
             {/*should work (должно работать)*/}

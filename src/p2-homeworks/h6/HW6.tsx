@@ -20,7 +20,7 @@ function HW6() {
 
     return (
         <div className={style.homeWork_6}>
-            <div className={style.title}>homeworks 6</div>
+            <div className={style.title}>homework 6</div>
             <div className={style.stand}>
                 <SuperEditableSpan
                     value={value}

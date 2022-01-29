@@ -22,7 +22,7 @@ function HW4() {
 
     return (
         <div className={style.homeWork_4}>
-            <div className={style.title}>homeworks 4</div>
+            <div className={style.title}>homework 4</div>
 
             <div className={style.stand}>
                 <div className={s.column}>

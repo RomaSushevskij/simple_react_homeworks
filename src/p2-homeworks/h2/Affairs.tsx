@@ -40,9 +40,9 @@ function Affairs(props: AffairsPropsType) {
 
     return (
         <div>
-
-            {mappedAffairs}
-
+            <div className={style.affairsBlock}>
+                {mappedAffairs}
+            </div>
             <div className={style.buttonBlock}>
                 <button className={setActiveClass('all')} onClick={setAll}>All</button>
                 <button className={setActiveClass('high')} onClick={setHigh}>High</button>
