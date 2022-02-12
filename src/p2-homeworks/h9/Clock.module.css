@@ -1,0 +1,50 @@
+.dateBlockWrapper {
+    width: 200px;
+}
+
+.timeAndDate {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #5C5C5C;
+
+}
+
+.dateBlock, .timeBlock {
+    padding: 5px;
+    font-size: 1.9em;
+}
+
+.dateBlock {
+    font-size: 1.1em;
+}
+
+.buttonsBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.enterActive {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
+}
+
+.exit {
+    opacity: 1;
+}
+
+.exitActive {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 500ms, transform 500ms;
+}

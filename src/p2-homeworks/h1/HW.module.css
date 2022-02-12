@@ -1,4 +1,4 @@
-.homeWork_1, .homeWork_2, .homeWork_3, .homeWork_4, .homeWork_6,.homeWork_7,.homeWork_8 {
+.homeWork_1, .homeWork_2, .homeWork_3, .homeWork_4, .homeWork_6, .homeWork_7, .homeWork_8, .homeWork_9 {
     background: linear-gradient(90deg, #f598a8, #f6edb2);
     display: flex;
     justify-content: center;
@@ -17,11 +17,17 @@
 .homeWork_4 {
     background: linear-gradient(90deg, #f6edb2, #f598a8);
 }
+
 .homeWork_6 {
-    background: linear-gradient(90deg, #f5abd7,#59c4cd);
+    background: linear-gradient(90deg, #f5abd7, #59c4cd);
 }
+
 .homeWork_8 {
     background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+}
+
+.homeWork_9 {
+    background: linear-gradient(135deg, #5fc3e4 0%, #e55d87 100%);
 }
 
 .stand {

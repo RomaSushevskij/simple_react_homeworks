@@ -2,6 +2,7 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import style from './Affairs.module.css'
+import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
@@ -12,11 +13,13 @@ type AffairsPropsType = { // need to fix any
 
 function Affairs(props: AffairsPropsType) {
     const mappedAffairs = props.data.map((a: AffairType) => (
-        <Affair // should work
-            key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
-            affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
-        />
+        <CSSTransition key={a._id} timeout={400} classNames={style}>
+            <Affair // should work
+                // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
+                affair={a}
+                deleteAffairCallback={props.deleteAffairCallback}
+            />
+        </CSSTransition>
     ));
 
     const setActiveClass = (filter: FilterType) => {
@@ -41,7 +44,9 @@ function Affairs(props: AffairsPropsType) {
     return (
         <div>
             <div className={style.affairsBlock}>
-                {mappedAffairs}
+                <TransitionGroup>
+                    {mappedAffairs}
+                </TransitionGroup>
             </div>
             <div className={style.buttonBlock}>
                 <button className={setActiveClass('all')} onClick={setAll}>All</button>
