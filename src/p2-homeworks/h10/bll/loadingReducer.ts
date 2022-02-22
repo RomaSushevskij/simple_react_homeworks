@@ -1,14 +1,25 @@
-const initState = {
-
+enum ACTION_TYPES {
+    IS_LOADING='HOMEWORKS/dz_10/IS_LOADING'
 }
 
-export const loadingReducer = (state = initState, action: any): any => { // fix any
+const initState = {
+    isLoading: false
+}
+export type initStateType = typeof initState
+
+export const loadingReducer = (state: initStateType = initState, action: GeneralActionType): initStateType => { // fix any
     switch (action.type) {
-        case '': {
-            return state
+        case ACTION_TYPES.IS_LOADING: {
+            return {
+                ...state, ...action.payload
+            }
         }
-        default: return state
+        default:
+            return state
     }
 }
 
-export const loadingAC = (): any => {} // fix any
+export type GeneralActionType =
+    ReturnType<typeof loadingAC>
+
+export const loadingAC = (isLoading:boolean) => ({type:ACTION_TYPES.IS_LOADING, payload:{isLoading}} as const)
