@@ -1,4 +1,13 @@
-.homeWork_1, .homeWork_2, .homeWork_3, .homeWork_4, .homeWork_6, .homeWork_7, .homeWork_8, .homeWork_9, .homeWork_10 {
+.homeWork_1,
+.homeWork_2,
+.homeWork_3,
+.homeWork_4,
+.homeWork_6,
+.homeWork_7,
+.homeWork_8,
+.homeWork_9,
+.homeWork_10,
+.homeWork_11 {
     background: linear-gradient(90deg, #f598a8, #f6edb2);
     display: flex;
     justify-content: center;
@@ -18,7 +27,7 @@
     background: linear-gradient(90deg, #f6edb2, #f598a8);
 }
 
-.homeWork_6 {
+.homeWork_6, homeWork_11 {
     background: linear-gradient(90deg, #f5abd7, #59c4cd);
 }
 

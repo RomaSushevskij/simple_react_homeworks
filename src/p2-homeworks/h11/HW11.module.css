@@ -1,0 +1,9 @@
+.stand {
+    min-width: 350px;
+    min-height: 70px;
+}
+.values {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
