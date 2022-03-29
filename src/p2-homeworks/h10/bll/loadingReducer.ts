@@ -1,13 +1,13 @@
 enum ACTION_TYPES {
-    IS_LOADING='HOMEWORKS/dz_10/IS_LOADING'
+    IS_LOADING = 'HOMEWORKS/dz_10/IS_LOADING'
 }
 
-const initState = {
+const loadingInitState = {
     isLoading: false
 }
-export type initStateType = typeof initState
+export type LoadingInitStateType = typeof loadingInitState
 
-export const loadingReducer = (state: initStateType = initState, action: GeneralActionType): initStateType => { // fix any
+export const loadingReducer = (state: LoadingInitStateType = loadingInitState, action: LoadingActionType): LoadingInitStateType => { // fix any
     switch (action.type) {
         case ACTION_TYPES.IS_LOADING: {
             return {
@@ -19,7 +19,7 @@ export const loadingReducer = (state: initStateType = initState, action: General
     }
 }
 
-export type GeneralActionType =
+export type LoadingActionType =
     ReturnType<typeof loadingAC>
 
-export const loadingAC = (isLoading:boolean) => ({type:ACTION_TYPES.IS_LOADING, payload:{isLoading}} as const)
+export const loadingAC = (isLoading: boolean) => ({type: ACTION_TYPES.IS_LOADING, payload: {isLoading}} as const)

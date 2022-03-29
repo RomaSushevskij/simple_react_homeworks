@@ -37,11 +37,8 @@ function HW11() {
     };
 
     return (
-        <div className={style.homeWork_1}>
+        <div className={style.homeWork_11}>
             <div className={style.title}>homework 11</div>
-
-
-            {/*should work (должно работать)*/}
             <div className={`${style.stand} ${s.stand}`}>
                 <div>
                     <span>{value1}</span>
@@ -65,7 +62,6 @@ function HW11() {
                                 valueLabelDisplay="auto"
                                 disableSwap/>
                     </Box>
-
                 </div>
             </div>
         </div>

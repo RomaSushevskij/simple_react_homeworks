@@ -1,13 +1,14 @@
 import React from 'react'
 import Message from "./Message";
 import style from './HW.module.css' ;
+import userLogo from '../../assets/userLogo.png'
 
 
 const messageData = {
-    avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+    avatar: userLogo,
     name: 'Some Name',
     message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, mollitia repellendus. Amet, ex incidunt itaque labore necessitatibus nobis saepe vero.',
-    time: '22:00',
+    time: new Date().toLocaleTimeString().slice(0, 5),
 }
 
 function HW1() {

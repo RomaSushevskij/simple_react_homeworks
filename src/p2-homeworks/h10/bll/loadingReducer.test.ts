@@ -1,6 +1,6 @@
-import {initStateType, loadingAC, loadingReducer} from "./loadingReducer";
+import {LoadingInitStateType, loadingAC, loadingReducer} from "./loadingReducer";
 
-let startState:initStateType;
+let startState:LoadingInitStateType;
 beforeEach(()=>{
     startState = {
         isLoading: false

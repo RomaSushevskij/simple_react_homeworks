@@ -5,13 +5,13 @@ import s from "./HW10.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "./bll/store";
 import {Dispatch} from "redux";
-import {GeneralActionType, loadingAC} from "./bll/loadingReducer";
+import {LoadingActionType, loadingAC} from "./bll/loadingReducer";
 import {Preloader} from "./Preloader/Preloader";
 
 
 function HW10() {
     const isLoading = useSelector((state: AppStateType) => state.loading.isLoading)
-    const dispatch = useDispatch<Dispatch<GeneralActionType>>()
+    const dispatch = useDispatch<Dispatch<LoadingActionType>>()
 
     const setLoading = () => {
         dispatch(loadingAC(true))
