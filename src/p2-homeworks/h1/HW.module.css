@@ -8,7 +8,8 @@
 .homeWork_9,
 .homeWork_10,
 .homeWork_11,
-.homeWork_12 {
+.homeWork_12,
+.homeWork_13 {
     background: linear-gradient(90deg, #f598a8, #f6edb2);
     display: flex;
     justify-content: center;
@@ -16,7 +17,7 @@
     padding: 40px;
 }
 
-.homeWork_2, .homeWork_8 {
+.homeWork_2, .homeWork_8, .homeWork_13 {
     background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
 }
 

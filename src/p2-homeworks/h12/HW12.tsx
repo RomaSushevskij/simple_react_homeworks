@@ -7,7 +7,7 @@ import {AppActionsType, AppStateType} from "../h10/bll/store";
 import {changeTheme, ThemeNameType} from "./bll/themeReducer";
 import style from "../h1/HW.module.css";
 
-const themes = ['dark', 'red', 'some'];
+const themes = ['some', 'dark', 'red',];
 
 function HW12() {
     const themeName = useSelector((state: AppStateType) => state.theme.themeName)
@@ -28,17 +28,5 @@ function HW12() {
         </div>
     );
 }
-
-// <div className={style.homeWork_12}>
-//     <div className={s[themeName]}>
-//                 <span className={s[themeName + '-text']}>
-//                 homeworks 12
-//             </span>
-//         <SuperRadio options={themes}
-//                     value={themeName}
-//                     onChangeOption={onChangeCallback}/>
-//
-//     </div>
-// </div>
 
 export default HW12;
