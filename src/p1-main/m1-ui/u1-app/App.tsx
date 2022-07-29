@@ -7,7 +7,7 @@ import HW4 from "../../../p2-homeworks/h4/HW4";
 import HW5 from "../../../p2-homeworks/h5/HW5";
 import style from '../../../p2-homeworks/h1/HW.module.css'
 
-function App() {
+export const App = () => {
     return (
         <div className={s.App}>
             <div className={style.header}>
@@ -21,5 +21,3 @@ function App() {
         </div>
     );
 }
-
-export default App
